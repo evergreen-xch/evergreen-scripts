@@ -10,5 +10,5 @@
       description: 'Show Evergreen device info via dmesg' 
       script: 'dmesg -w'
     - name: 'Factory Reset'
-      description: 'Show Evergreen device info via dmesg' 
+      description: 'Reset Evergreen to factory conditions' 
       script: 'touch /.nuke_me && journalctl -f -n 100 -u factory_reset'
