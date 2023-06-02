@@ -1,0 +1,11 @@
+---
+  scripts:
+    - name: 'Free Disk Space'
+      description: 'Free errant disk usage caused by Flexpool fullnode disconnect' 
+      script: 'rm /logs/flexrunner/*.log'
+    - name: 'Evergreen Log'
+      description: 'Show the Evergreen AWS IoT Greengrass Docker Compose Log' 
+      script: 'tail -F -n 500 /greengrass/v2/logs/evg.compose.log'
+    - name: 'Device Info'
+      description: 'Show Evergreen Device info via dmesg' 
+      script: 'dmesg -w'
