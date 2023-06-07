@@ -12,3 +12,6 @@
     - name: 'Factory Reset'
       description: 'Reset Evergreen to factory conditions' 
       script: 'touch /.nuke_me && journalctl -f -n 100 -u factory_reset'
+    - name: 'Fix Flashing Red'
+      description: 'Fix bad OS installation' 
+      script: 'rm /uuids/device.uuid && systemctl restart os_manager & journalctl -n 1000 -f -u os_manager'
