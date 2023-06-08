@@ -13,12 +13,12 @@
       description: 'Show Evergreen device info via dmesg' 
       script: 'dmesg -w'
     - name: 'Factory Reset'
-      protection: 'warn'
+      protection: warn
       description: 'Reset Evergreen to factory conditions'
       message: 'This command will reset your device. After it completes you will need set up the device again.'
       script: 'touch /.nuke_me && journalctl -f -n 100 -u factory_reset'
     - name: 'Fix Flashing Red'
-      protection: 'pin'
+      protection: pin
       message: 'This command could render your device inoperable! Please proceed only under the direction of Evergreen support.'
       description: 'Fix bad OS installation' 
       script: 'rm /uuids/device.uuid && systemctl restart os_manager & journalctl -n 1000 -f -u os_manager'
