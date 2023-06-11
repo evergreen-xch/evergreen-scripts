@@ -12,6 +12,9 @@
     - name: 'Device Info'
       description: 'Show Evergreen device info via dmesg' 
       script: 'dmesg -w'
+    - name: 'Kill Device Manager'
+      description: 'Shutdown Device Manager to allow drive unmounting' 
+      script: 'pgrep -f device_manager'
     - name: 'Factory Reset'
       protection: warn
       description: 'Reset Evergreen to factory conditions'
